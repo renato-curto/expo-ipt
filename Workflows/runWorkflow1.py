@@ -2,9 +2,11 @@ import requests
 import json
 import os
 
+# Envia o workflow sem alterações
+
 # --- Configurações ---
 COMFYUI_API_URL = "http://127.0.0.1:8188/prompt"  # URL da API do ComfyUI
-WORKFLOW_FILE = "Basic Face Swap API.json"                   # Nome do seu arquivo JSON do workflow
+WORKFLOW_FILE = "Basic Face Swap API.json"        # Nome do seu arquivo JSON do workflow
 
 def send_workflow_to_comfyui(workflow_json_path):
     """

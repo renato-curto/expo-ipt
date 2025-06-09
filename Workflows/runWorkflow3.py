@@ -3,6 +3,8 @@ import json
 import os
 import argparse
 
+# Envia o workflow modificando o arquivo de input', o source e o prefixo do arquivo no nó SaveImage
+
 # --- Configurações ---
 COMFYUI_API_URL = "http://127.0.0.1:8188/prompt"  # URL da API do ComfyUI
 DEFAULT_WORKFLOW_FILE = "Basic Face Swap API.json"                   # Nome padrão do seu arquivo JSON do workflow

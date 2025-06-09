@@ -3,9 +3,11 @@ import json
 import os
 import argparse # Importar a biblioteca argparse
 
+# Envia o workflow modificando o prefixo do arquivo no nó SaveImage
+
 # --- Configurações ---
-COMFYUI_API_URL = "http://127.0.0.1:8188/prompt"  # URL da API do ComfyUI
-DEFAULT_WORKFLOW_FILE = "Basic Face Swap API.json"                   # Nome padrão do seu arquivo JSON do workflow
+COMFYUI_API_URL = "http://127.0.0.1:8188/prompt"   # URL da API do ComfyUI
+DEFAULT_WORKFLOW_FILE = "Basic Face Swap API.json" # Nome padrão do seu arquivo JSON do workflow
 
 def find_node_by_class_type(workflow_data, class_type):
     """Encontra o primeiro nó com um dado class_type."""
