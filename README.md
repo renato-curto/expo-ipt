@@ -99,4 +99,7 @@ git clone https://github.com/rgthree/rgthree-comfy.git ComfyUI_windows_portable/
 <br>
 [ComfyUI](https://github.com/comfyanonymous/ComfyUI)<br>
 [ComfyUI-Manager](https://github.com/Comfy-Org/ComfyUI-Manager)<br>
-[ReActor](https://codeberg.org/Gourieff/comfyui-reactor-nod)
+[ReActor](https://codeberg.org/Gourieff/comfyui-reactor-nod)<br>
+<br>
+[QR Code Photobooth in TouchDesigner](https://www.youtube.com/watch?v=t8tIc5b58qM)<br>
+[QR Code Maker in TouchDesigner](https://derivative.ca/community-post/asset/qr-code-maker/65759)
