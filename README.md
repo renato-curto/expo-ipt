@@ -103,4 +103,6 @@ git clone https://github.com/rgthree/rgthree-comfy.git ComfyUI_windows_portable/
 <br>
 [QR Code Photobooth in TouchDesigner](https://www.youtube.com/watch?v=t8tIc5b58qM)<br>
 [QR Code Maker in TouchDesigner](https://derivative.ca/community-post/asset/qr-code-maker/65759)<br>
-[Magic AI Photobooth with TouchDesigner & ComfyUI](https://www.youtube.com/watch?v=wc7UNt2BcVU)
+<br>
+[TouchDesigner & ComfyUI: Magic AI Photobooth](https://www.youtube.com/watch?v=wc7UNt2BcVU)<br>
+[ComfyTD Deep Dive](https://www.youtube.com/watch?v=jIIqE8cp420)
