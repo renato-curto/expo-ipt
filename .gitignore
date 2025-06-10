@@ -1,1 +1,6 @@
 ComfyUI_windows_portable/
+PhotoBooth/Backup/*
+PhotoBooth/Photos/*
+PhotoBooth/QR/*
+PhotoBooth/Server/photos/*
+!**/.gitkeep
