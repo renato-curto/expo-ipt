@@ -61,8 +61,32 @@ git clone https://github.com/Fannovel16/comfyui_controlnet_aux/ ComfyUI_windows_
 
 ##### Use Everywhere Nodes
 
+Clone the node repository:
+
 ```
 git clone https://github.com/chrisgoringe/cg-use-everywhere.git ComfyUI_windows_portable/ComfyUI/custom_nodes/cg-use-everywhere
+```
+
+##### ComfyUI-GGUF
+
+Clone the node repository:
+
+```
+git clone https://github.com/city96/ComfyUI-GGUF ComfyUI_windows_portable/ComfyUI/custom_nodes/ComfyUI-GGUF
+```
+
+Install the requirements:
+
+```
+./ComfyUI_windows_portable/python_embeded/python.exe -m pip install -r ./ComfyUI_windows_portable/ComfyUI/custom_nodes/ComfyUI-GGUF/requirements.txt
+```
+
+##### XLabs-AI
+
+Clone the node repository:
+
+```
+git clone https://github.com/XLabs-AI/x-flux-comfyui.git ComfyUI_windows_portable/ComfyUI/custom_nodes/x-flux-comfyui
 ```
 
 #### ReActor
@@ -134,6 +158,10 @@ Download the `sigclip_vision_patch14_384.safetensors` from [Hugging Face](https:
 
 Download the `lux1-redux-dev.safetensors` from [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/style_models/`.
 
+##### XLbas-AI ControlNet
+
+Download the `flux-controlnet-depth-v3` from [Hugging Face](https://huggingface.co/XLabs-AI/flux-controlnet-depth-v3/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/xlabs/`.
+
 #### pyqrcode for TouchDesigner
 
 cd "\Program Files\Derivative\TouchDesigner\bin"
@@ -152,6 +180,8 @@ python.exe -m pip install pyqrcode
 [ControlNet Depth + FLUX Redux, Easy Workflow for ComfyUI](https://www.youtube.com/watch?v=lbtQEtyvHps)<br>
 [The Simplest Workflow for FLUX on ComfyUI](https://www.youtube.com/watch?v=TWSFej_S_bY)<br>
 [FLUX - Use Everywhere (UE) Nodes on ComfyUI](https://www.youtube.com/watch?v=cLhEOgABWFE)<br>
+[GGUF FLUX ComfyUI: Boosting Workflows with Quantized Models](https://www.youtube.com/watch?v=AzeZkosyqp4)<br>
+[FLUX Controlnet Workflow for Comfyui GGUF models](https://www.youtube.com/watch?v=HP_ocMsMdyI)<br>
 <br>
 [ComfyUI](https://github.com/comfyanonymous/ComfyUI)<br>
 [ComfyUI-Manager](https://github.com/Comfy-Org/ComfyUI-Manager)<br>
@@ -164,5 +194,6 @@ python.exe -m pip install pyqrcode
 [ComfyTD Deep Dive](https://www.youtube.com/watch?v=jIIqE8cp420)<br>
 <br>
 [ComfyUI Flux Examples](https://comfyanonymous.github.io/ComfyUI_examples/flux/)<br>
+[XLabs-AI FLUX ControlNet Collections](https://huggingface.co/XLabs-AI/flux-controlnet-depth-v3)
 <br>
 [PHP for Windows](https://windows.php.net/download/)
