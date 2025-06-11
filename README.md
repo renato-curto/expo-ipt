@@ -21,11 +21,13 @@ Generative AI for the Expo IPT 2025.
 
 #### ComfyUI
 
+##### Interface
+
 Download `ComfyUI_windows_portable_nvidia.7z` from [GitHub](https://github.com/comfyanonymous/ComfyUI/releases/latest/download/ComfyUI_windows_portable_nvidia.7z) and extract to `./expo-ipt/`.
 
 Download `stable-diffusion-v1-5` from [Hugging Face](https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/blob/main/v1-5-pruned-emaonly-fp16.safetensors) and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/checkpoints/`.
 
-#### ComfyUI Manager
+##### ComfyUI Manager
 
 Go to `./expo-ipt/` and clone the repository:
 
@@ -41,7 +43,31 @@ Install the requirements:
 
 Execute `./ComfyUI_windows_portable/run_nvidia_gpu.bat`, on the Windows Command Prompt to start ComfyUI to finish the installation. Test the system: load `/Workflow/Browse Templates/Image Generation` and click Run.
 
-#### InsightFace
+##### rgthree-comfy
+
+Close ComfyUI, stop server and clone the repository:
+
+```
+git clone https://github.com/rgthree/rgthree-comfy.git ComfyUI_windows_portable/ComfyUI/custom_nodes/rgthree-comfy
+```
+
+##### ControlNet Auxiliary Preprocessors
+
+Clone the node repository:
+
+```
+git clone https://github.com/Fannovel16/comfyui_controlnet_aux/ ComfyUI_windows_portable/ComfyUI/custom_nodes/comfyui_controlnet_aux
+```
+
+##### Use Everywhere Nodes
+
+```
+git clone https://github.com/chrisgoringe/cg-use-everywhere.git ComfyUI_windows_portable/ComfyUI/custom_nodes/cg-use-everywhere
+```
+
+#### ReActor
+
+##### InsightFace
 
 Verify your portable Python version:
 
@@ -57,7 +83,7 @@ Install:
 ./ComfyUI_windows_portable/python_embeded/python.exe -m pip install ./ComfyUI_windows_portable/insightface-0.7.3-cp312-cp312-win_amd64.whl onnxruntime
 ```
 
-#### ReActor
+##### Requisites
 
 ```
 mkdir -p ./ComfyUI_windows_portable/ComfyUI/models/ultralytics/bbox
@@ -71,21 +97,42 @@ mkdir -p ./ComfyUI_windows_portable/ComfyUI/models/sams
 
 Download both Sams models from [Hugging Face](https://huggingface.co/datasets/Gourieff/ReActor/tree/main/models/sams) and place them into the above directory.
 
+##### ReActor custom node
+
 Clone the repository:
 
 ```
 git clone https://codeberg.org/Gourieff/comfyui-reactor-node ComfyUI_windows_portable/ComfyUI/custom_nodes/comfyui-reactor-node
 ```
 
-Execute ´./ComfyUI_windows_portable/ComfyUI/custom_nodes/comfyui-reactor-node/install.bat´, on the Windows Command Prompt to finish the installation and then `./ComfyUI_windows_portable/run_nvidia_gpu.bat` to load the final working system.
+Execute `./ComfyUI_windows_portable/ComfyUI/custom_nodes/comfyui-reactor-node/install.bat`, on the Windows Command Prompt to finish the installation and then `./ComfyUI_windows_portable/run_nvidia_gpu.bat` to load the final working system.
 
-#### rgthree-comfy
+#### Flux
 
-Close ComfyUI, stop server and clone the repository:
+##### Loras
 
-```
-git clone https://github.com/rgthree/rgthree-comfy.git ComfyUI_windows_portable/ComfyUI/custom_nodes/rgthree-comfy
-```
+Download the `flux1-canny-dev-lora.safetensors` from [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-Canny-dev-lora/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/loras/`.
+
+Download the `flux1-depth-dev-lora.safetensors` from [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-Depth-dev-lora/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/loras/`.
+
+Download the `diffusion_pytorch_model.safetensors` (
+FLUX.1-Turbo-Alpha) from [Hugging Face](https://huggingface.co/alimama-creative/FLUX.1-Turbo-Alpha/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/loras/`.
+
+##### Check points
+
+Download the `flux1-dev-fp8.safetensors` from [Hugging Face](https://huggingface.co/Comfy-Org/flux1-dev/blob/main/flux1-dev-fp8.safetensors)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/checkpoints/`.
+
+Download the `flux1-schnell-fp8.safetensors` from [Hugging Face](https://huggingface.co/Comfy-Org/flux1-schnell/blob/main/flux1-schnell-fp8.safetensors)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/checkpoints/`.
+
+##### VAE
+
+Download the `diffusion_pytorch_model.safetensors` from [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-dev/tree/main/vae)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/vae/`.
+
+##### Redux
+
+Download the `sigclip_vision_patch14_384.safetensors` from [Hugging Face](https://huggingface.co/Comfy-Org/sigclip_vision_384/blob/main/sigclip_vision_patch14_384.safetensors)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/clip_vision/`.
+
+Download the `lux1-redux-dev.safetensors` from [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/style_models/`.
 
 #### pyqrcode for TouchDesigner
 
@@ -100,6 +147,11 @@ python.exe -m pip install pyqrcode
 [Como Instalar o InsightFace no ComfyUI](https://www.youtube.com/watch?v=qSGAQWxSMJw)<br>
 [Como Fazer Troca de Rosto no ComfyUI com o ReActor](https://www.youtube.com/watch?v=lSuhpN5PM6c)<br>
 [New AI Face Swap with ReActor and ComfyUI: How to Install and Use](https://www.youtube.com/watch?v=cFrDYl1FJwc)<br>
+[FLUX Redux: Simplified Workfloe (Style Transfer)](https://www.youtube.com/watch?v=nO8O0q2NLEA)<br>
+<br>
+[ControlNet Depth + FLUX Redux, Easy Workflow for ComfyUI](https://www.youtube.com/watch?v=lbtQEtyvHps)<br>
+[The Simplest Workflow for FLUX on ComfyUI](https://www.youtube.com/watch?v=TWSFej_S_bY)<br>
+[FLUX - Use Everywhere (UE) Nodes on ComfyUI](https://www.youtube.com/watch?v=cLhEOgABWFE)<br>
 <br>
 [ComfyUI](https://github.com/comfyanonymous/ComfyUI)<br>
 [ComfyUI-Manager](https://github.com/Comfy-Org/ComfyUI-Manager)<br>
@@ -110,5 +162,7 @@ python.exe -m pip install pyqrcode
 <br>
 [TouchDesigner & ComfyUI: Magic AI Photobooth](https://www.youtube.com/watch?v=wc7UNt2BcVU)<br>
 [ComfyTD Deep Dive](https://www.youtube.com/watch?v=jIIqE8cp420)<br>
+<br>
+[ComfyUI Flux Examples](https://comfyanonymous.github.io/ComfyUI_examples/flux/)<br>
 <br>
 [PHP for Windows](https://windows.php.net/download/)
