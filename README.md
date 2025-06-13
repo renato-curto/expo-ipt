@@ -27,6 +27,10 @@ Download `ComfyUI_windows_portable_nvidia.7z` from [GitHub](https://github.com/c
 
 Download `stable-diffusion-v1-5` from [Hugging Face](https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/blob/main/v1-5-pruned-emaonly-fp16.safetensors) and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/checkpoints/`.
 
+To make ComfyUI accessible from other computers on your network, locate your machine's IP address (e.g., 192.168.15.13), choose an available port (e.g., 7000), and edit the file `./expo-ipt/ComfyUI_windows_portable/run_nvidia_gpu.bat`. Add the following arguments `--listen 192.168.15.13 --port 7000`, right after `ComfyUI\main.py`.
+
+On the first run, you may need to grant the application access to the network or configure the Windows Firewall accordingly.
+
 ##### ComfyUI Manager
 
 Go to `./expo-ipt/` and clone the repository:
@@ -41,7 +45,7 @@ Install the requirements:
 ./ComfyUI_windows_portable/python_embeded/python.exe -m pip install -r ./ComfyUI_windows_portable/ComfyUI/custom_nodes/comfyui-manager/requirements.txt
 ```
 
-Execute `./ComfyUI_windows_portable/run_nvidia_gpu.bat`, on the Windows Command Prompt to start ComfyUI to finish the installation. Test the system: load `/Workflow/Browse Templates/Image Generation` and click Run.
+To finish the installation, start ComfyUI. Using Windows Explorer, navigate to `./expo-ipt/ComfyUI_windows_portable/` double click `run_nvidia_gpu.bat`. Test the system: load `/Workflow/Browse Templates/Image Generation` and click Run. On the 4090 it should take only 4.31 seconds.
 
 ##### rgthree-comfy
 
@@ -80,6 +84,8 @@ Install the requirements:
 ```
 ./ComfyUI_windows_portable/python_embeded/python.exe -m pip install -r ./ComfyUI_windows_portable/ComfyUI/custom_nodes/ComfyUI-GGUF/requirements.txt
 ```
+
+To finish the installation, start ComfyUI. Using Windows Explorer, navigate to `./expo-ipt/ComfyUI_windows_portable/` double click `run_nvidia_gpu.bat`.
 
 ##### XLabs-AI
 
@@ -129,7 +135,11 @@ Clone the repository:
 git clone https://codeberg.org/Gourieff/comfyui-reactor-node ComfyUI_windows_portable/ComfyUI/custom_nodes/comfyui-reactor-node
 ```
 
-Execute `./ComfyUI_windows_portable/ComfyUI/custom_nodes/comfyui-reactor-node/install.bat`, on the Windows Command Prompt to finish the installation and then `./ComfyUI_windows_portable/run_nvidia_gpu.bat` to load the final working system.
+To install all the requirements, using Windows Explorer, navigate to `./expo-ipt/ComfyUI_windows_portable/ComfyUI/custom_nodes/comfyui-reactor-node/` and double click `install.bat`.
+
+To finish the installation, start ComfyUI. Using Windows Explorer, navigate to `./expo-ipt/ComfyUI_windows_portable/` double click `run_nvidia_gpu.bat`.
+
+To test, clck `/Workflow/Open`, select the `./expo-ipt/Workflows/Basic Face Swap.json` workflow (reload the images, if necessary) and execute it. The first run on the 4090 should take only 24.97 seconds. Subsequent runs, with a different source image, about 2.37 seconds.
 
 #### Flux
 
@@ -156,11 +166,33 @@ Download the `diffusion_pytorch_model.safetensors` from [Hugging Face](https://h
 
 Download the `sigclip_vision_patch14_384.safetensors` from [Hugging Face](https://huggingface.co/Comfy-Org/sigclip_vision_384/blob/main/sigclip_vision_patch14_384.safetensors)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/clip_vision/`.
 
-Download the `lux1-redux-dev.safetensors` from [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/style_models/`.
+Download the `flux1-redux-dev.safetensors` from [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/style_models/`.
+
+##### GGUF
+
+Download the `flux1-dev-Q4_0.gguf` from [Hugging Face](https://huggingface.co/city96/FLUX.1-dev-gguf/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/unet/`.
+
+Download the `flux1-schnell-Q4_0.gguf` from [Hugging Face](https://huggingface.co/city96/FLUX.1-schnell-gguf/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/unet/`.
+
+Download the `t5xxl_fp8_e4m3fn.safetensors` and the `clip_l.safetensors` from [Hugging Face](https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/clip/`.
+
+Download the `ae.safetensors` from [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-dev/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/vae/`.
 
 ##### XLbas-AI ControlNet
 
-Download the `flux-controlnet-depth-v3` from [Hugging Face](https://huggingface.co/XLabs-AI/flux-controlnet-depth-v3/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/xlabs/`.
+Clone the repository:
+
+```
+git clone https://github.com/XLabs-AI/x-flux-comfyui.git ComfyUI_windows_portable/ComfyUI/custom_nodes/x-flux-comfyui
+```
+
+Go to `./expo-ipt/ComfyUI_windows_portable/ComfyUI/custom_nodes/x-flux-comfyui/` and run `../../../python_embeded\python.exe setup.py`.
+
+To finish the installation, start ComfyUI. Using Windows Explorer, navigate to `./expo-ipt/ComfyUI_windows_portable/` double click `run_nvidia_gpu.bat`.
+
+Download the `flux-depth-controlnet-v3.safetensors` from [Hugging Face](https://huggingface.co/XLabs-AI/flux-controlnet-depth-v3/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/xlabs/controlnets/`.
+
+Download the `flux-canny-controlnet-v3.safetensors` from [Hugging Face](https://huggingface.co/XLabs-AI/flux-controlnet-canny-v3/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/xlabs/controlnets/`.
 
 #### pyqrcode for TouchDesigner
 
