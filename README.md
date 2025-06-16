@@ -8,7 +8,7 @@ Generative AI for the Expo IPT 2025.
 
 - Time and patience
 - Lots of disk space (10GB+)
-- NVIDIA graphics card
+- NVIDIA graphics card (12GB+)
 - Windows Pro
 - Git
 
@@ -27,7 +27,7 @@ Download `ComfyUI_windows_portable_nvidia.7z` from [GitHub](https://github.com/c
 
 Download `stable-diffusion-v1-5` from [Hugging Face](https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/blob/main/v1-5-pruned-emaonly-fp16.safetensors) and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/checkpoints/`.
 
-To make ComfyUI accessible from other computers on your network, locate your machine's IP address (e.g., 192.168.15.13), choose an available port (e.g., 7000), and edit the file `./expo-ipt/ComfyUI_windows_portable/run_nvidia_gpu.bat`. Add the following arguments `--listen 192.168.15.13 --port 7000`, right after `ComfyUI\main.py`.
+To make ComfyUI accessible from other computers on your network, locate your machine's IP address (e.g., 192.168.15.13), choose an available port (e.g., 4090), and edit the file `./expo-ipt/ComfyUI_windows_portable/run_nvidia_gpu.bat`. Add the following arguments `--listen 192.168.15.13 --port 4090`, right after `ComfyUI\main.py`.
 
 On the first run, you may need to grant the application access to the network or configure the Windows Firewall accordingly.
 
@@ -149,8 +149,7 @@ Download the `flux1-canny-dev-lora.safetensors` from [Hugging Face](https://hugg
 
 Download the `flux1-depth-dev-lora.safetensors` from [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-Depth-dev-lora/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/loras/`.
 
-Download the `diffusion_pytorch_model.safetensors` (
-FLUX.1-Turbo-Alpha) from [Hugging Face](https://huggingface.co/alimama-creative/FLUX.1-Turbo-Alpha/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/loras/`.
+Download the `diffusion_pytorch_model.safetensors` (FLUX.1-Turbo-Alpha) from [Hugging Face](https://huggingface.co/alimama-creative/FLUX.1-Turbo-Alpha/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/loras/`.
 
 ##### Check points
 
