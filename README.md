@@ -157,6 +157,8 @@ Download the `flux1-dev-fp8.safetensors` from [Hugging Face](https://huggingface
 
 Download the `flux1-schnell-fp8.safetensors` from [Hugging Face](https://huggingface.co/Comfy-Org/flux1-schnell/blob/main/flux1-schnell-fp8.safetensors)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/checkpoints/`.
 
+Download the `512-inpainting-ema.safetensors` from [Hugging Face](https://huggingface.co/stabilityai/stable-diffusion-2-inpainting/blob/main/512-inpainting-ema.safetensors)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/checkpoints/`.
+
 ##### VAE
 
 Download the `diffusion_pytorch_model.safetensors` from [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-dev/tree/main/vae)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/vae/`.
