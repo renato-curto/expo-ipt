@@ -7,7 +7,7 @@ Generative AI for the Expo IPT 2025.
 ### Requirements
 
 - Time and patience
-- Lots of disk space (10GB+)
+- Lots of disk space (100GB+)
 - NVIDIA graphics card (12GB+)
 - Windows Pro
 - Git
@@ -195,6 +195,20 @@ Download the `flux-depth-controlnet-v3.safetensors` from [Hugging Face](https://
 
 Download the `flux-canny-controlnet-v3.safetensors` from [Hugging Face](https://huggingface.co/XLabs-AI/flux-controlnet-canny-v3/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/xlabs/controlnets/`.
 
+##### [Run it Locally: Flux Upscale ControlNet + ComfyUI Workflow](https://www.youtube.com/watch?v=QOX6me13doM) by Olivio Sarikas
+
+[Workflows & images](https://drive.google.com/file/d/1kM51XBuVYfq0RA_o5AtpnMXr6bdfEGNT/view)
+
+Download the ` diffusion_pytorch_model.safetensors` from [Hugging Face](https://huggingface.co/jasperai/Flux.1-dev-Controlnet-Upscaler/tree/main) and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/controlnet/` as `Flux.1-dev-Controlnet-Upscaler.safetensors`.
+
+Download the `flux1-dev-Q5_0.gguf` from [Hugging Face](https://huggingface.co/city96/FLUX.1-dev-gguf/tree/main) and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/unet/`.
+
+Download the `Aesthetic_Amateur_Photo_V4_Beta_2.safetensors` from [Civitai](https://civitai.com/models/689192?modelVersionId=843103) and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/loras/` as `Flux_Aesthetic_Amateur_Photo_V4_Beta_2.safetensors`.
+
+Download the `flux1-dev-Q5_0.gguf` from [Hugging Face](https://huggingface.co/city96/FLUX.1-dev-gguf/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/unet/`.
+
+Download the ` t5xxl_fp16.safetensors` and the `clip_l.safetensors` from [Hugging Face](https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/clip/`.
+
 #### pyqrcode for TouchDesigner
 
 cd "\Program Files\Derivative\TouchDesigner\bin"
@@ -215,6 +229,7 @@ python.exe -m pip install pyqrcode
 [FLUX - Use Everywhere (UE) Nodes on ComfyUI](https://www.youtube.com/watch?v=cLhEOgABWFE)<br>
 [GGUF FLUX ComfyUI: Boosting Workflows with Quantized Models](https://www.youtube.com/watch?v=AzeZkosyqp4)<br>
 [FLUX Controlnet Workflow for Comfyui GGUF models](https://www.youtube.com/watch?v=HP_ocMsMdyI)<br>
+[Run it Locally: Flux Upscale ControlNet + ComfyUI Workflow](https://www.youtube.com/watch?v=QOX6me13doM)<br>
 <br>
 [ComfyUI](https://github.com/comfyanonymous/ComfyUI)<br>
 [ComfyUI-Manager](https://github.com/Comfy-Org/ComfyUI-Manager)<br>
