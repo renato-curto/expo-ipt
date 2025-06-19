@@ -209,6 +209,10 @@ Download the `flux1-dev-Q5_0.gguf` from [Hugging Face](https://huggingface.co/ci
 
 Download the ` t5xxl_fp16.safetensors` and the `clip_l.safetensors` from [Hugging Face](https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/clip/`.
 
+##### [Flux Inpainting in ComfyUI](https://www.youtube.com/watch?v=YNqacq9YuW8) by Jokerai
+
+Download the ` flux1-fill-dev.safetensors` from [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/unet/`.
+
 #### pyqrcode for TouchDesigner
 
 cd "\Program Files\Derivative\TouchDesigner\bin"
