@@ -213,6 +213,39 @@ Download the ` t5xxl_fp16.safetensors` and the `clip_l.safetensors` from [Huggin
 
 Download the ` flux1-fill-dev.safetensors` from [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/unet/`.
 
+##### [LTXV 0.9.7 Locally in ComfyUI with low VRAM](https://www.youtube.com/watch?v=KtqSm89n1zQ)
+
+Clone the LTXVideo node repository:
+
+```
+git clone https://github.com/Lightricks/ComfyUI-LTXVideo.git ComfyUI_windows_portable/ComfyUI/custom_nodes/ComfyUI-LTXVideo
+```
+
+Install the requirements:
+
+```
+./ComfyUI_windows_portable/python_embeded/python.exe -m pip install -r ./ComfyUI_windows_portable/ComfyUI/custom_nodes/ComfyUI-LTXVideo/requirements.txt
+```
+
+To finish the installation, start ComfyUI. Using Windows Explorer, navigate to `./expo-ipt/ComfyUI_windows_portable/` double click `run_nvidia_gpu.bat`.
+
+Clone the VideoHelperSuite node repository:
+
+```
+git clone https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git ComfyUI_windows_portable/ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite
+```
+
+Install the requirements:
+
+```
+./ComfyUI_windows_portable/python_embeded/python.exe -m pip install -r ./ComfyUI_windows_portable/ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite/requirements.txt
+```
+
+To finish the installation, start ComfyUI. Using Windows Explorer, navigate to `./expo-ipt/ComfyUI_windows_portable/` double click `run_nvidia_gpu.bat`.
+
+
+
+Clone the VideoHelperSuite node repository:
 #### pyqrcode for TouchDesigner
 
 cd "\Program Files\Derivative\TouchDesigner\bin"
