@@ -161,7 +161,7 @@ Download the `512-inpainting-ema.safetensors` from [Hugging Face](https://huggin
 
 ##### VAE
 
-Download the `diffusion_pytorch_model.safetensors` from [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-dev/tree/main/vae)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/vae/`.
+Download the `diffusion_pytorch_model.safetensors` from [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-dev/tree/main/vae)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/vae/`.
 
 ##### Redux
 
@@ -177,7 +177,7 @@ Download the `flux1-schnell-Q4_0.gguf` from [Hugging Face](https://huggingface.c
 
 Download the `t5xxl_fp8_e4m3fn.safetensors` and the `clip_l.safetensors` from [Hugging Face](https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/clip/`.
 
-Download the `ae.safetensors` from [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-dev/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/vae/`.
+Download the `ae.safetensors` from [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-dev/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/vae/`.
 
 ##### XLbas-AI ControlNet
 
@@ -243,9 +243,18 @@ Install the requirements:
 
 To finish the installation, start ComfyUI. Using Windows Explorer, navigate to `./expo-ipt/ComfyUI_windows_portable/` double click `run_nvidia_gpu.bat`.
 
-
-
 Clone the VideoHelperSuite node repository:
+
+##### Flux.1-Kontext.dev
+
+Download the [flux1-dev-kontext_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/flux1-kontext-dev_ComfyUI/resolve/main/split_files/diffusion_models/flux1-dev-kontext_fp8_scaled.safetensors)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/diffusion_models/`.
+
+Download the `ae.safetensors` from [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/ae.safetensors)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/vae/`.
+
+Download the `clip_l.safetensors` from [Hugging Face](https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/clip/`.
+
+Download the [t5xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn_scaled.safetensors)  and place it into `./expo-ipt/ComfyUI_windows_portable/ComfyUI/models/text_encoders/`.
+
 #### pyqrcode for TouchDesigner
 
 cd "\Program Files\Derivative\TouchDesigner\bin"
