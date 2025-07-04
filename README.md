@@ -290,4 +290,5 @@ python.exe -m pip install pyqrcode
 [ComfyUI Flux Examples](https://comfyanonymous.github.io/ComfyUI_examples/flux/)<br>
 [XLabs-AI FLUX ControlNet Collections](https://huggingface.co/XLabs-AI/flux-controlnet-depth-v3)
 <br>
+[ComfyTD Deep dive](https://www.youtube.com/watch?v=jIIqE8cp420)<br>
 [PHP for Windows](https://windows.php.net/download/)
